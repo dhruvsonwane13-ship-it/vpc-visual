@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152e">
+  <meta name="description" content="An animated, beginner-friendly visual guide to AWS VPC networking.">
+  <title>AWS VPC Visualizer — Dhruv Sonawane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="AWS VPC Visualizer home"><span class="brand-cloud" aria-hidden="true">☁</span><span><strong>AWS VPC Visualizer</strong><small>A simple, step-by-step guide to AWS VPC</small></span></a>
+    <div class="top-actions"><span class="creator">Created by <strong>Dhruv Sonawane</strong></span><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark page theme" title="Toggle page theme"><span aria-hidden="true">☀</span><span aria-hidden="true">☾</span></button></div>
+  </header>
+  <main id="top" class="app-layout">
+    <aside class="sidebar" aria-label="Tutorial steps and legend">
+      <nav id="stepNav" class="step-nav" aria-label="VPC tutorial steps"></nav>
+      <div class="controls"><button id="autoPlay" class="btn btn-play" type="button"><span aria-hidden="true">▶</span><span><strong>Auto-play</strong><small>5s per step</small></span></button><button id="reset" class="btn btn-reset" type="button"><span aria-hidden="true">↻</span> Reset</button></div>
+      <section class="legend"><h2>Moving Objects Legend</h2><ul id="legendList"></ul></section>
+      <p class="sidebar-note">A learning diagram — not a deployable AWS architecture.</p>
+    </aside>
+    <section class="content" aria-label="VPC diagram and explanation">
+      <div class="diagram-scroll"><div id="diagram" class="diagram-stage" role="region" aria-label="Animated AWS VPC architecture diagram" tabindex="0"></div></div>
+      <section class="caption-card" aria-live="polite" aria-atomic="true">
+        <div class="caption-heading"><span id="captionNumber" class="step-number">1</span><div><h1 id="captionTitle">VPC</h1><p id="captionSubtitle">Your fenced plot in AWS</p></div></div>
+        <div class="caption-part"><h2>In plain words</h2><p id="captionPlain"></p></div>
+        <div class="caption-part"><h2>Technical name</h2><p id="captionTechnical"></p></div>
+        <div class="caption-part"><h2>Watch the picture</h2><p id="captionWatch"></p></div>
+      </section>
+      <footer class="page-footer">Made for learning AWS networking · Created by <strong>Dhruv Sonawane</strong></footer>
+    </section>
+  </main>
+</body>
+</html>
